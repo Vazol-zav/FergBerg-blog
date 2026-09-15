@@ -3,3 +3,27 @@ body {
   color: white;
   font-family: system-ui, sans-serif;
 }
+.card {
+  width: 350px;
+  height: 300px; /* fixed height */
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  overflow: hidden; /* hides overflow */
+  display: flex;
+  flex-direction: column;
+}
+.card-content {
+  overflow-y: auto; /* vertical scroll */
+  padding-right: 0.5rem; /* prevents text from touching scrollbar */
+}
+.card-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+  background: #FF00EA;
+  border-radius: 10px;
+}
