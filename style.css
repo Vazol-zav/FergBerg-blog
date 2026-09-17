@@ -2,6 +2,7 @@ body {
   background: black;
   color: white;
   font-family: system-ui, sans-serif;
+  cursor: none;
 }
 .card {
   width: 350px;
