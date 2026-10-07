@@ -5,7 +5,6 @@ body {
   cursor: none;
 }
 .card {
-  width: 350px;
   height: 300px; /* fixed height */
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
@@ -138,7 +137,7 @@ section {
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  box-shadow: 0 0 30px #666666:
+  box-shadow: 0 0 30px #666666;
   transition: transform 0.05s linear;
   z-index: 9999;
 }
