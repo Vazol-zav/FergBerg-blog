@@ -137,6 +137,13 @@ Major objects
   border-radius: 8px;
   text-decoration: none;
 }
+.Bgrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px, 250px));
+  justify-content: center;
+  justify-items: center;
+  gap: 1rem;
+}
 /*THE ORB*/
 .orb{
   width: 40px;
