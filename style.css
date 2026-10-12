@@ -4,42 +4,6 @@ body {
   font-family: system-ui, sans-serif;
   cursor: none;
 }
-.card {
-  height: 300px; /* fixed height */
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  overflow: hidden; /* hides overflow */
-  display: flex;
-  flex-direction: column;
-}
-.card-content {
-  overflow-y: auto; /* vertical scroll */
-  padding-right: 0.5rem; /* prevents text from touching scrollbar */
-}
-.card-content::-webkit-scrollbar {
-  width: 6px;
-}
-
-.card-content::-webkit-scrollbar-thumb {
-  background: #FF00EA;
-  border-radius: 10px;
-}
-.card_holder{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
-  gap: 1rem;
-}
-.B{
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #00ff9d;
-  color: black;
-  border-radius: 8px;
-  text-decoration: none;
-}
 /*system stuff & variables for background*/
 /*color vars*/
 :root{
@@ -56,11 +20,7 @@ body {
 }
 
 /* Background animation */
-@keyframes a-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+
 
 /* ------------------------------
    TYPOGRAPHY
@@ -132,12 +92,52 @@ a {
   pointer-events: auto;
   z-index: 1;
 }
+/*cards*/
+.card {
+  height: 300px; /* fixed height */
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  overflow: hidden; /* hides overflow */
+  display: flex;
+  flex-direction: column;
+}
+.card-content {
+  overflow-y: auto; /* vertical scroll */
+  padding-right: 0.5rem; /* prevents text from touching scrollbar */
+}
+.card-content::-webkit-scrollbar {
+  width: 6px;
+}
 
+.card-content::-webkit-scrollbar-thumb {
+  background: #FF00EA;
+  border-radius: 10px;
+}
+.card_holder{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+  gap: 1rem;
+}
 /* Space between major sections */
 section {
   margin: 4rem 0;
 }
-/*animations in css*/
+/*________________-
+Major objects
+-__________________*/
+/*B for Button*/
+.B{
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #00ff9d;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+}
+/*THE ORB*/
 .orb{
   width: 40px;
   height: 40px;
@@ -148,6 +148,15 @@ section {
   box-shadow: 0 0 30px #666666;
   transition: transform 0.05s linear;
   z-index: 9999;
+
+/*animations in css*/
+
+@keyframes a-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 }
 @keyframes ghostFX{
   0%{opacity: 0.6;
@@ -184,6 +193,24 @@ section {
   z-index: 9997;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+.GT1{
+  background: linear-gradient(
+    90deg,
+    var(--agreen),
+    var(--acore),
+    var(--avio),
+    var(--cpink)
+  );
+  background-size: 300% auto;
+  color: transparent;
+  background-clip: text;
+  webkit-background-clip: text;
+
+  animation: a-shift 5s linear infinite;
+}
+/*-______________________
+footer
+________________________-*/
 footer {
   background: #050505;
   color: #9e9e9e;
